@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Ремонт со смыслом</title>
+</head>
+
+
+<body class="bg-dark m-3">
+    <!-- Шапка -->
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(247, 247, 247, 0.491);
+            backdrop-filter: blur(2px);
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <div class="header container text-uppercase fw-semibold">
+        <a class="logo">Ремонт <br> со смыслом</a>
+        <a class="phone">+7 123 456 78 90</a>
+    </div>
+
+    <!-- Hero - блок -->
+    <style>
+        .slider-wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgb(0, 0, 0, 0.15);
+
+        }
+
+        .carousel-inner {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .carousel-inner img {
+            height: 450px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @media(max-width:768px) {
+            .slider-wrapper {
+                max-width: 90%;
+            }
+        }
+
+
+        .btn-primary {
+            background-color: #ff6600;
+            border: none;
+            padding: 15px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-pulse {
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.605);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 102, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 102, 0, 0);
+            }
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background-color: #e65c00;
+        }
+    </style>
+    <section class="container hero-section py-5">
+        <div class="row align-items-center">
+
+
+            <div class="col-md-6 order-1 order-md-2 mb-4 text-white text-center">
+                <h1 class="display-4 fw-bold mb-4">Строим дома на века</h1>
+                <p class="lead mb-4">Профессиональное строительство под ключ. Используем только проверенные материалы и
+                    даем гарантию на все виды работ до 10 лет.</p>
+
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-primary btn-lg cta-pulse">
+                        Рассчитать стоимость объекта
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 order-2 order-md-1 mb-4 mb-md-0">
+                <div class="slider-wrapper">
+                    <div id="constructionCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/projects/p_s/p_1.webp" class="d-block w-100 img-fluid" alt="Проект">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/projects/p_s/p_2.webp" class="d-block w-100 img-fluid" alt="Проект">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/projects/p_s/p_3.webp" class="d-block w-100 img-fluid" alt="Проект">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/projects/p_s/p_4.webp" class="d-block w-100 img-fluid" alt="Проект">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/projects/p_s/p_5.webp" class="d-block w-100 img-fluid" alt="Проект">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#constructionCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#constructionCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- о нас -->
+    <style>
+        .card {
+            position: relative;
+            min-height: 400px;
+            overflow: hidden;
+        }
+
+        .description {
+            height: 170px;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.408);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            z-index: 1;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        .description h2 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .description .card-description {
+            margin: 0;
+            line-height: 1.5;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+    <section class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card rounded-4"
+                    style="background-image: url('img/icon/bg-img-1.webp'); background-size: cover; min-height: 400px;">
+                    <div class="description">
+                        <h2>15+ лет</h2>
+                        <p class="card-description">
+                            Опыта в отделке квартир и строительстве коттеджей. Мы реализуем проекты любой сложности: от
+                            идеи
+                            до
+                            готового пространства
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-4"
+                    style="background-image: url('img/icon/bg-img-2.webp'); background-size: cover; min-height: 400px;">
+                    <div class="description">
+                        <h2>1000+ проектов</h2>
+                        <p class="card-description">
+                            Мы успешно выполнили множество проектов, подтверждая высокий профессионализм команды,
+                            надежность
+                            и
+                            качество выполненных работ
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-4"
+                    style="background-image: url('img/icon/bg-img-3.webp'); background-size: cover; min-height: 400px;">
+                    <div class="description">
+                        <h2>30+ специалистов</h2>
+                        <p class="card-description">
+                            Профессиональные сотрудники, знающие свое дело. В составе команды — инженеры, дизайнеры,
+                            электрики и
+                            мастера по отделке
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- примеры работ -->
+    <style>
+        .slid-box-cont {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-box {
+            display: flex;
+            width: auto;
+            height: 100%;
+            animation: scroll 1000s linear infinite;
+        }
+
+        .slid-card {
+            min-width: 300px;
+            /* Ширина каждого слайда */
+            height: 80%;
+            margin: 0 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .slid-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Анимация прокрутки */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+                /* Сдвигаем на половину общей ширины */
+            }
+        }
+    </style>
+    <div class="slid-box-cont mt-5">
+        <div class="slide-box">
+            <div class="slid-card">
+                <img src="img/projects/p_s/p_10.webp" alt="Изображение">
+            </div>
+            <div class="slid-card">
+                <img src="img/projects/p_s/p_11.webp" alt="Изображение">
+            </div>
+            <div class="slid-card">
+                <img src="img/projects/p_s/p_12.webp" alt="Изображение">
+            </div>
+            <div class="slid-card">
+                <img src="img/projects/p_s/p_13.webp" alt="Изображение">
+            </div>
+            <div class="slid-card">
+                <img src="img/projects/p_s/p_14.webp" alt="Изображение">
+            </div>
+            <div class="slid-card">
+                <img src="img/projects/p_s/p_15.webp" alt="Изображение">
+            </div>
+            <div class="slid-card">
+                <img src="img/projects/p_s/p_16.webp" alt="Изображение">
+            </div>
+            <div class="slid-card">
+                <img src="img/projects/p_s/p_17.webp" alt="Изображение">
+            </div>
+            <div class="slid-card">
+                <img src="img/projects/p_s/p_18.webp" alt="Изображение">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.querySelector('.slide-box');
+            const slides = document.querySelectorAll('.slid-card');
+
+            // Дублируем слайды для бесконечной прокрутки
+            slides.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                slider.appendChild(clone);
+            });
+
+            // Функция для настройки анимации в зависимости от количества слайдов
+            function updateSliderAnimation() {
+                // Общая ширина всех слайдов
+                const totalWidth = Array.from(slides).reduce((sum, slide) => {
+                    return sum + slide.offsetWidth;
+                }, 0);
+
+                // Устанавливаем ширину контейнера слайдов
+                slider.style.width = totalWidth * 2 + 'px'; // Удваиваем для бесконечности
+
+                // Обновляем анимацию
+                slider.style.animation = `scroll ${totalWidth / 50}s linear infinite`;
+            }
+
+            // Инициализация и обновление при загрузке и изменении размера окна
+            updateSliderAnimation();
+            window.addEventListener('resize', updateSliderAnimation);
+        });
+
+    </script>
+
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
