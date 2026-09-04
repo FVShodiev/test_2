@@ -12,31 +12,20 @@
 <body class="bg-dark m-3">
     <!-- Шапка -->
     <style>
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: rgba(247, 247, 247, 0.491);
-            backdrop-filter: blur(2px);
-            border-radius: 5px;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-            cursor: pointer;
+        .logo{
+            text-decoration:none;
+            color: #fff;
+            font-weight: 700;
         }
     </style>
-    <div class="header container text-uppercase fw-semibold">
+    <div class="header container text-uppercase text-center">
         <a class="logo">Ремонт <br> со смыслом</a>
-        <a class="phone">+7 123 456 78 90</a>
     </div>
 
     <!-- Hero - блок -->
     <style>
         .slider-wrapper {
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgb(0, 0, 0, 0.15);
@@ -54,13 +43,8 @@
             object-fit: cover;
         }
 
-        @media(max-width:768px) {
-            .slider-wrapper {
-                max-width: 90%;
-            }
-        }
-
-
+        
+        
         .btn-primary {
             background-color: #ff6600;
             border: none;
@@ -68,11 +52,23 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
-
+        
+        .button-link{
+            font-size: 16px;
+        }
+        
         .cta-pulse {
             animation: pulse-animation 2s infinite;
         }
 
+        @media(max-width:768px) {
+            .slider-wrapper {
+                max-width: 90%;
+            }
+            .button-link{
+                font-size:12px;
+            }
+        }
         @keyframes pulse-animation {
             0% {
                 box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.605);
@@ -97,12 +93,12 @@
 
 
             <div class="col-md-6 order-1 order-md-2 mb-4 text-white text-center">
-                <h1 class="display-4 fw-bold mb-4">Строим дома на века</h1>
+                <h1 class="display-5 fw-bold mb-4">Строим дома на века</h1>
                 <p class="lead mb-4">Профессиональное строительство под ключ. Используем только проверенные материалы и
                     даем гарантию на все виды работ до 10 лет.</p>
 
                 <div class="d-flex justify-content-center">
-                    <a href="#" class="btn btn-primary btn-lg cta-pulse">
+                    <a href="#" class="btn btn-primary btn-lg cta-pulse button-link">
                         Рассчитать стоимость объекта
                     </a>
                 </div>
@@ -166,7 +162,7 @@
 
         .description h2 {
             margin: 0 0 10px 0;
-            font-size: 2.2rem;
+            font-size: 1.5rem;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
         }
 
